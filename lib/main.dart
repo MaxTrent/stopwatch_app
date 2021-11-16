@@ -10,7 +10,7 @@ class StopWatchApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-
+      color: Colors.deepPurple,
       home: StopWatch(),
     );
   }
