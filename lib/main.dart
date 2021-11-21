@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stopwatch/login_screen.dart';
 import './stopwatch.dart';
 
 void main() {
@@ -11,7 +12,7 @@ class StopWatchApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       color: Colors.deepPurple,
-      home: StopWatch(),
+      home: LoginScreen(),
     );
   }
 }
