@@ -3,7 +3,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class StopWatch extends StatefulWidget {
-  const StopWatch({Key? key}) : super(key: key);
+  static const route = '/stopwatch';
+  final String? name;
+  final String? email;
+
+  const StopWatch({this.name, this.email, Key? key}) : super(key: key);
 
   @override
   _StopWatchState createState() => _StopWatchState();
@@ -48,10 +52,12 @@ class _StopWatchState extends State<StopWatch> {
   }
 
   @override
+
   Widget build(BuildContext context) {
+    String name = ModalRoute.of(context)!.settings.arguments as String;
     return Scaffold(
       appBar: AppBar(
-        title: Text('Stopwatch'),
+        title: Text(name),
       ),
       body: Column(
         children: <Widget>[

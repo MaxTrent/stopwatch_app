@@ -11,8 +11,12 @@ class StopWatchApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      color: Colors.deepPurple,
-      home: LoginScreen(),
+      routes: {
+        '/': (context) => LoginScreen(),
+        LoginScreen.route: (context) => LoginScreen(),
+        StopWatch.route: (context) => StopWatch(),
+      },
+      initialRoute: '/',
     );
   }
 }
